@@ -1,0 +1,85 @@
+﻿<Window x:Class="Labb_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Labb_3"
+        mc:Ignorable="d"
+        Title="MainWindow" Background="LightBlue" Height="480" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0"
+            Grid.Column="0" Grid.RowSpan="6" Margin="0,0,0,72">
+            <DockPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFD48017" Offset="1"/>
+                    <GradientStop Color="#FF8DE975" Offset="1"/>
+                    <GradientStop Color="#FFD48017" Offset="0.602"/>
+                    <GradientStop Color="#FFD49D17" Offset="0"/>
+                </LinearGradientBrush>
+            </DockPanel.Background>
+        </DockPanel>
+        
+        <StackPanel Grid.Row="0"
+        Grid.Column="0" Grid.RowSpan="1">
+            <Label Content="Restuarant Way" HorizontalAlignment="Center" Width="160" FontSize="20" Height="50" Margin="0,0,0,0" FontFamily="Comic Sans MS"/>
+            <Label Content="Booking System" HorizontalAlignment="Center" Width="160" FontSize="20" Height="50" Margin="0,-22,0,0" FontFamily="Comic Sans MS"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+        Grid.Column="0" Grid.RowSpan="2">
+            <Label Content="Name" HorizontalAlignment="Center" Width="160" FontSize="22" Height="50" FontFamily="Comic Sans MS"/>
+            <TextBox Name="NameBox" Width="150"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2"
+        Grid.Column="0" Grid.RowSpan="3">
+            <Label Content="Date" HorizontalAlignment="Center" Width="160" FontSize="22" Height="47" FontFamily="Comic Sans MS"/>
+            <DatePicker x:Name="Datepicker" Width="150"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3"
+        Grid.Column="0" Grid.RowSpan="4">
+            <Label Content="Time" HorizontalAlignment="Center" Width="160" FontSize="22" Height="47" FontFamily="Comic Sans MS"/>
+            <ComboBox Name="TimeComboBox" Width="150" SelectedIndex="0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4"
+        Grid.Column="0" Grid.RowSpan="5">
+            <Label Content="Tablenumber"  HorizontalAlignment="Center" Width="160" FontSize="22" Height="47" FontFamily="Comic Sans MS"/>
+            <ComboBox Name="TableNumberBox" Width="150" SelectedIndex="0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5"
+        Grid.Column="0" Grid.RowSpan="6">
+            <Button x:Name="Book" Content="Book" Width="160" Height="20" Margin="0,15,0,0" FontFamily="Comic Sans MS" HorizontalAlignment="Center" Click="Book_Click"/>
+            <Button x:Name="Cancel" Content="Cancel" Width="160" Height="20" Margin="0,10,0,0" FontFamily="Comic Sans MS" HorizontalAlignment="Center" Click="Cancel_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5"
+        Grid.Column="1" Grid.RowSpan="6">
+            <Button x:Name="ShowBookings" Content="Show Bookings" Width="170" Height="20" Margin="0,45,0,0" FontFamily="Comic Sans MS" Click="ShowBookings_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0"
+        Grid.Column="1" Grid.RowSpan="6">
+            <ListBox Name="BookedList" Width="170" Height="410"/>
+        </StackPanel>
+
+
+
+
+
+    </Grid>
+</Window>
